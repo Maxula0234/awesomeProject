@@ -1,4 +1,4 @@
-module awesomeProject
+module testDataGoNew
 
 go 1.19
 

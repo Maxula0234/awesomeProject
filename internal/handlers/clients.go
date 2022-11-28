@@ -1,8 +1,8 @@
 package handlers
 
 import (
-	"awesomeProject/internal/service"
 	"net/http"
+	"testDataGoNew/internal/service"
 )
 
 func getClients(w http.ResponseWriter, r *http.Request) {

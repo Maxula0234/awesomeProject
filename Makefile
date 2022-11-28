@@ -1,4 +1,4 @@
-APP?=awesomeProject
+APP?=testdatagonew
 PORT?=8000
 COMMIT?=$(shell git rev-parse --short HEAD)
 GOOS?=linux
@@ -14,13 +14,13 @@ build: clean
         		-o ${APP}
 
 container: build
-	docker build -t $(APP):$(RELEASE) .
+	docker build -t $(APP) .
 
 run: container
-	docker stop $(APP):$(RELEASE) || true && docker rm $(APP):$(RELEASE) || true
+	docker stop $(APP) || true && docker rm $(APP)|| true
 	docker run --name ${APP} -p ${PORT}:${PORT} --rm \
 		-e "PORT=${PORT}" \
-		$(APP):$(RELEASE)
+		$(APP)
 
 test:
 	go test -v -r	ace ./...

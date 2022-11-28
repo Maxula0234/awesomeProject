@@ -1,10 +1,10 @@
 package service
 
 import (
-	"awesomeProject/internal/models"
 	"encoding/json"
 	"io/ioutil"
 	"net/http"
+	"testDataGoNew/internal/models"
 )
 
 var getPet = "https://petstore.swagger.io/v2/pet/findByStatus?status=available"

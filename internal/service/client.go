@@ -1,11 +1,11 @@
 package service
 
 import (
-	"awesomeProject/internal/models"
 	"encoding/json"
 	"fmt"
 	"log"
 	"net/http"
+	"testDataGoNew/internal/models"
 )
 
 var (

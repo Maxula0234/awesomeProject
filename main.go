@@ -1,11 +1,11 @@
 package main
 
 import (
-	"awesomeProject/internal/handlers"
-	"awesomeProject/version"
 	"log"
 	"net/http"
 	"os"
+	"testDataGoNew/internal/handlers"
+	"testDataGoNew/version"
 )
 
 func main() {

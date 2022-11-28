@@ -1,10 +1,10 @@
 package service
 
 import (
-	"awesomeProject/version"
 	"encoding/json"
 	"log"
 	"net/http"
+	"testDataGoNew/version"
 	"time"
 )
 
