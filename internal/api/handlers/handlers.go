@@ -11,4 +11,5 @@ func Router() *mux.Router {
 	r.HandleFunc("/clients/{id}", getClient).Methods("GET")
 	r.HandleFunc("/clients", post).Methods("POST")
 	return r
+
 }
