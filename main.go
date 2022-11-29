@@ -3,7 +3,6 @@ package main
 import (
 	"log"
 	"net/http"
-	"os"
 	"testDataGoNew/internal/handlers"
 	"testDataGoNew/version"
 )
@@ -15,12 +14,12 @@ func main() {
 		version.Commit, version.BuildTime, version.Release,
 	)
 
-	port := os.Getenv("PORT")
-	if port == "" {
-		log.Fatal("Port is not set.")
-	}
+	//port := os.Getenv("PORT")
+	//if port == "" {
+	//	log.Fatal("Port is not set.")
+	//}
 
-	//port := "8000"
+	port := "8000"
 
 	r := handlers.Router()
 	log.Fatal(http.ListenAndServe(":"+port, r))

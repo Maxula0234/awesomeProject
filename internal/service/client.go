@@ -11,7 +11,7 @@ import (
 var (
 	clients = []models.Client{
 		{
-			Id:         0,
+			Id:         1,
 			Username:   "Maks",
 			FirstName:  "Hor",
 			LastName:   "Hor",
@@ -21,7 +21,7 @@ var (
 			UserStatus: 0,
 		},
 		{
-			Id:         0,
+			Id:         2,
 			Username:   "Ivan",
 			FirstName:  "Petr",
 			LastName:   "Kold",
@@ -50,4 +50,24 @@ func GetClients(w http.ResponseWriter, _ *http.Request) []models.Client {
 	w.Header().Set("Content-Type", "application/json")
 	w.Write(body)
 	return []models.Client{}
+}
+
+func GetClientById(w http.ResponseWriter, _ *http.Request, id int) {
+	var c models.Client
+	for _, client := range clients {
+		if client.Id == id {
+			c = client
+		}
+	}
+
+	if c.Id != id {
+		http.Error(w, http.StatusText(http.StatusNotFound), http.StatusNotFound)
+	}
+
+	body, err := json.Marshal(c)
+	if err != nil {
+	}
+
+	w.Header().Set("Content-Type", "application/json")
+	w.Write(body)
 }
