@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 	"net/http"
-	"testDataGoNew/internal/handlers"
+	"testDataGoNew/internal/api/handlers"
 	"testDataGoNew/version"
 )
 

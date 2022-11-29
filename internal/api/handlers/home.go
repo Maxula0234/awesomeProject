@@ -2,7 +2,7 @@ package handlers
 
 import (
 	"net/http"
-	"testDataGoNew/internal/service"
+	"testDataGoNew/internal/api/service"
 )
 
 func home(w http.ResponseWriter, r *http.Request) {
